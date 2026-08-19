@@ -1,7 +1,7 @@
 ## Bem-vindo(a) ao meu perfil 😁
 
 <div id="stats">
-  <a href="https://github.com/henrique-amorim-silva">
+  <a href="https://github.com/henrique-amorim-silva" target="_blank" rel="noopener noreferrer">
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=henrique-amorim-silva&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
     <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=henrique-amorim-silva&layout=compact&langs_count=6&theme=tokyonight"/>
   </a>
