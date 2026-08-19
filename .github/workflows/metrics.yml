@@ -13,12 +13,16 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Token gerado automaticamente pelo GitHub (atenção a letras minúsculas)
-          token: ${{ secrets.METRICS_TOKEN }}
-
-          # O que você quer mostrar no card
+          filename: metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
           display: classic
           plugin_languages: yes
           plugin_languages_ignored: not-code
           plugin_languages_limit: 6
           plugin_lines: yes
+
+      - name: Commit generated metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update metrics image"
+          file_pattern: metrics.svg
