@@ -11,15 +11,19 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          display: classic
+          base: header, activity, community, repositories
           plugin_languages: yes
           plugin_languages_ignored: not-code
           plugin_languages_limit: 6
-          plugin_lines: yes
+          plugin_languages_details: bytes-size, percentage
 
       - name: Commit generated metrics
         uses: stefanzweifel/git-auto-commit-action@v5
