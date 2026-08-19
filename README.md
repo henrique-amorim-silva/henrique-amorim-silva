@@ -1,6 +1,6 @@
 ## Bem-vindo(a) ao meu perfil 😁
 
-<div align="center">
+<div>
   <img src="./metrics.svg" alt="Metrics">
 </div>
     
