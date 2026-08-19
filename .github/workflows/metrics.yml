@@ -20,10 +20,13 @@ jobs:
           filename: metrics.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           base: header, activity, community, repositories
+          # Configuração avançada para forçar a leitura das linguagens nos seus repositórios públicos
           plugin_languages: yes
-          plugin_languages_ignored: not-code
+          plugin_languages_skipped: "henrique-amorim-silva" # Substitua ou adicione nomes de repositórios se quiser ignorar algo, ou deixe vazio
+          plugin_languages_other: yes
+          plugin_languages_sections: most-used
           plugin_languages_limit: 6
-          plugin_languages_details: bytes-size, percentage
+          plugin_languages_analysis_timeout: 15
 
       - name: Commit generated metrics
         uses: stefanzweifel/git-auto-commit-action@v5
